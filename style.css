@@ -42,6 +42,9 @@ body{
     z-index: -1;
     filter: brightness(50%);
 }
+.logo{
+    margin-left: 3rem;
+}
 nav{
     z-index: 10;
     width: 100%;
@@ -97,12 +100,105 @@ nav{
     padding: 0 1.5rem;
     background-color: var(--red);
 }
+.menu{
+    display: flex;
+    background-color: #171717;
+    color: #fff;
+    cursor: pointer;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: .5rem;
+    display: none;
+}
+.hamburger{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 4rem;
+}
+.menu span{
+    margin-right: 1rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: "Jost",sans-serif;
+    letter-spacing: 1px;
+}
+.hambar{
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    border-radius: 30%;
+    background-color: #fff;
+    transition: all .3s ease-in-out;
+}
+
+.hambar:nth-child(1){
+    top: 8px;
+}
+.hambar:nth-child(3){
+    bottom: 8px;
+}
+.hamburger.active .hambar:nth-child(1){
+    transform: rotate(45deg);
+    top: initial;
+}
+.hamburger.active .hambar:nth-child(2){
+    opacity: 0;
+}
+.hamburger.active .hambar:nth-child(3){
+    transform: rotate(-45deg);
+    bottom: initial;
+}
+
+
 
 @media screen and (max-width:1300px) {
     
 }
 @media screen and (max-width:1200px) {
-    
+    .menu{
+        display: inherit;
+    }
+    .nav {
+        width: 100%;
+        
+    }
+    .nav-ul{
+        left: 0;
+        width: 100%;
+        padding: 1.6rem 3rem;
+        position: absolute;
+        top: 8rem;
+        height: 70px !important;
+        background-color: #5E5E5E;
+        flex-direction: column;
+        transition: all .3s ease;
+        overflow-x: hidden;
+    }
+    .nav-ul li{
+        display: none;
+    }
+    .nav-ul.active li{
+        display: initial;
+    }
+    .nav-ul.active .getfreequote-a{
+        display: flex;
+    }
+    .nav ul li {
+        margin: 1.2rem 0;
+    }
+    .nav-ul.active{
+        height: auto !important;
+    }
+    .getfreequote-a {
+        height: 4rem;
+        margin-top: 2rem;
+        display: none;
+    }
 }
 @media screen and (max-width:1000px) {
     

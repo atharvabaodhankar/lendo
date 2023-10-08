@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../style.css" />
+    <!-- https://preview.colorlib.com/theme/lendo/index.html -->
   </head>
   <body>
     <section id="hero">
@@ -17,21 +18,39 @@
               alt=""
             />
           </div>
-          <ul>
+          <ul class="nav-ul ">
+            <div class="menu">
+              <span>MENU</span>
+              <div class="hamburger">
+                <div class="hambar"></div>
+                <div class="hambar"></div>
+                <div class="hambar"></div>
+              </div>
+            </div>
             <li><a class="nav-a" href="#">Home</a></li>
             <li><a class="nav-a" href="#">Services</a></li>
             <li><a class="nav-a" href="#">Projects</a></li>
             <li><a class="nav-a" href="#">About</a></li>
             <li><a class="nav-a" href="#">Blog</a></li>
             <li><a class="nav-a" href="#">Contact</a></li>
-            
+
             <a href="#" class="getfreequote-a">Get Free Quote</a>
           </ul>
-          
         </div>
       </nav>
     </section>
 
-    <script src="../script.js"></script>
+    <script>
+      var menubar = document.querySelector(".nav-ul");
+      var hamburger = document.querySelector(".menu");
+      var hambar = document.querySelector(".hamburger");
+
+      hamburger.addEventListener("click" , ()=>{
+        hambar.classList.toggle("active");
+        menubar.classList.toggle("active");
+      })
+     
+     
+    </script>
   </body>
 </html>
