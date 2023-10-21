@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="../style.css" />
     <!-- https://preview.colorlib.com/theme/lendo/index.html -->
   </head>
-  <body>
+  <body></body>
     <section id="hero">
       <div class="hero-img"></div>
-      <nav>
+      <nav class="navbar">
         <div class="nav">
           <div class="logo">
             <img
@@ -38,16 +38,31 @@
           </ul>
         </div>
       </nav>
+      <div class="hero">
+        <h1>Best technology and awesome service we offer</h1>
+        <p>Ullamcorper fringi tortor consec adipis elit sed do eiusmod tempor.</p>
+        <a href="#" class="btn-red">Check Our Services<i class="fa-solid fa-arrow-right"></i></a>
+      </div>
     </section>
-
+    <script src="https://kit.fontawesome.com/79f75f2740.js" crossorigin="anonymous"></script>
     <script>
       var menubar = document.querySelector(".nav-ul");
+      var navbar = document.querySelector(".navbar");
       var hamburger = document.querySelector(".menu");
       var hambar = document.querySelector(".hamburger");
 
       hamburger.addEventListener("click" , ()=>{
         hambar.classList.toggle("active");
         menubar.classList.toggle("active");
+      })
+
+      window.addEventListener("scroll" , ()=>{
+        if(scrollY>400)
+        {
+          navbar.classList.add("active");
+        }else{
+          navbar.classList.remove("active");
+        }
       })
      
      
