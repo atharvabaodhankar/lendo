@@ -342,6 +342,54 @@ nav {
 .services-box:hover{
     box-shadow: 0 20px 30px rgba(35,47,85,0.1);
 }
+/* Plan */
+#plan{
+    display: flex;
+    background-image: url(https://preview.colorlib.com/theme/lendo/assets/img/gallery/section-bg1.jpg.webp);
+    align-items: center;
+    justify-content: right;
+    background-position: left center;
+    background-size: cover;
+    padding: 10rem 0 ;
+}
+.plan{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #ffff;
+    padding: 8rem 6rem;
+}
+
+.plan-main{
+    width: 900px;
+    margin-left: 50px;
+}
+.plan h1{
+    position: relative;
+}
+.plan h1 a:hover{
+    color: var(--red);
+}
+.plan h1::before{
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: -80px;
+    width: 50px;
+    height: 3px;
+    background-color: var(--red);
+}
+.plan h1 a{
+    color: #171717;
+    font-weight: 400;
+    font-size: 3.5rem;
+    transition: all .3s ease;
+}
+.plan-main p{
+    margin: 3rem 0;
+    margin-bottom: 6rem;
+}
+
 @media screen and (max-width:1300px) {}
 
 @media screen and (max-width:1200px) {
@@ -411,6 +459,9 @@ nav {
     .services-box {
         width: calc(25% - 2rem);
     }
+    .plan-main{
+        width: 600px;
+    }
 }
 
 @media screen and (max-width:1000px) {
@@ -431,6 +482,18 @@ nav {
 @media screen and (max-width:900px) {
     h1 {
         font-size: 4rem;
+    }
+    .plan-main{
+        width: 100%;
+        margin-left: 0;
+    }
+    .plan{
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+    }
+    .plan h1::before{
+        display: none;
     }
 }
 
@@ -459,8 +522,10 @@ nav {
     }
     .services-box{
         width: calc(50% - 2rem);
+    }   
+    .plan {
+        padding: 8rem 4rem;
     }
-    
 }
 
 @media screen and (max-width:500px) {
@@ -486,6 +551,9 @@ nav {
     }
     .services-flex{
         justify-content: center;
+    }
+    .plan h1 a {
+        font-size: 3rem;
     }
 }
 
