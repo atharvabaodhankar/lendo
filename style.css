@@ -389,8 +389,135 @@ nav {
     margin: 3rem 0;
     margin-bottom: 6rem;
 }
+/* Choose */
+#choose{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.choose{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 3rem 0;
+}
+.choose-main{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 600px;
+    position: relative;
+    margin-left: 8rem;
+}
+.choose-main h1{
+    font-size: 3.4rem;
+    font-weight: 400;
+}
+.choose-main::after{
+    position: absolute;
+    content: 'WHY CHOOSE US';
+    color: var(--red);
+    font-size: 1.7rem;
+    font-weight: 550;
+    letter-spacing: 2px;
+    top: 15%;
+    left: -150px;
+    transform: rotate(-90deg);
+}
+.choose-main p{
+    margin: 3rem 0;
+    color: var(--grey);
+    font-weight: 500;
+}
+.choose-video{
+    height: 700px;
+    position: relative;
+    margin-left: 4rem;
+}
+.choose-video img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.choose-video i{
+    font-size: 3rem;
+    color: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all .3s ease;
+}
+.choose-v-i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 5;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50% , -50%);
+    padding: .4rem;
+    border: 2px solid #ffffff;
+}
+.choose-v-i::after{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: .4rem;
+    top: .4rem;
+    z-index: -1;
+    border-radius: 50%;
+    background-color: #ffffff90;
+    transform: scale(1.4);
+    transition: all .3s ease;
+}
+.choose-v-i:hover i{
+    background-color: var(--red);
+    color: #fff;
+}
+.choose-v-i:hover::after{
+    transform: scale(1.6);
+}
 
-@media screen and (max-width:1300px) {}
+.choose-main-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+.choose-box{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 45%;
+    height: 150px;
+}
+.choose-box h1{
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--red);
+    padding: 1rem 2rem;
+}
+.choose-box h4{
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #132E43;
+    line-height: 3rem;
+}
+@media screen and (max-width:1300px) {
+    .choose-main {
+        width: 400px;
+    }
+}
 
 @media screen and (max-width:1200px) {
     .menu {
@@ -462,6 +589,13 @@ nav {
     .plan-main{
         width: 600px;
     }
+    .choose-video {
+        height: 650px;
+        width: 400px;
+    }
+    .choose-main {
+        width: 370px;
+    }
 }
 
 @media screen and (max-width:1000px) {
@@ -475,6 +609,18 @@ nav {
     .services-box{
         width: calc(50% - 3rem);
         margin-top: 3rem;
+    }
+    #choose {
+        flex-direction: column;
+    }
+    .choose-main{
+        padding: 4rem 0;
+        width: 500px;
+    }
+    .choose-video {
+        height: 480px;
+        width: 400px;
+        margin-left: 0;
     }
 
 }
@@ -494,6 +640,12 @@ nav {
     }
     .plan h1::before{
         display: none;
+    }
+    .choose-main{
+        width: 420px;
+    }
+    .choose-main::after {
+        left: -120px;
     }
 }
 
@@ -526,6 +678,24 @@ nav {
     .plan {
         padding: 8rem 4rem;
     }
+    .choose-main{
+        width: 90%;
+        margin-left: 7rem;
+        margin-right: 3rem;
+    }
+    .choose-video {
+        height: 350px;
+        width: 90%;
+    }
+    .choose-box{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .choose-main::after {
+        font-size: 1.4rem;
+    }
+    
 }
 
 @media screen and (max-width:500px) {
@@ -554,6 +724,17 @@ nav {
     }
     .plan h1 a {
         font-size: 3rem;
+    }
+    .choose-main h1{
+        font-size: 3rem;
+    }
+    .choose-main{
+        padding: 4rem 2.5rem;
+        margin-left: 4rem;
+        margin-right: 3rem;
+    }
+    .choose-main::after {
+        left: -83px;
     }
 }
 
