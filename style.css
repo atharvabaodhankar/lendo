@@ -268,41 +268,47 @@ nav {
     padding: 6rem 0;
     background-color: #F2F4F8;
 }
-.services-head{
+
+.services-head {
     margin: 3rem 0;
     display: flex;
     align-items: flex-start;
-    width:1200px;
+    width: 1200px;
     padding: 3rem 0;
 }
-.services-header{
+
+.services-header {
     display: flex;
     width: 50%;
     position: relative;
 }
-.services-header h1{
+
+.services-header h1 {
     font-size: 3.5rem;
     font-weight: 400;
     margin-left: 5rem;
     line-height: 4rem;
 }
-.services-header span{
+
+.services-header span {
     font-size: 1.6rem;
     letter-spacing: 2px;
     font-weight: 300;
     color: var(--red);
     position: absolute;
-    left: -30px ;
+    left: -30px;
     top: 3.5vh;
     transform: rotate(-90deg);
 }
-.services-flex{
+
+.services-flex {
     width: 1200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.services-box{
+
+.services-box {
     width: calc(25% - 4rem);
     border-radius: 1rem;
     padding: 3rem 3rem;
@@ -316,12 +322,13 @@ nav {
     text-align: center;
 }
 
-.services-box h4{
+.services-box h4 {
     font-size: 1.6rem;
     font-weight: 700;
     margin: 2rem 0;
 }
-.services-box a{
+
+.services-box a {
     display: flex;
     color: var(--red);
     font-size: 1.6rem;
@@ -329,30 +336,36 @@ nav {
     opacity: 0;
     transition: all .3s ease;
 }
-.services-box:hover a{
+
+.services-box:hover a {
     opacity: 1;
 }
-.services-box a i{
+
+.services-box a i {
     margin-left: 0.5rem;
-    transition: all .3s ease ;
+    transition: all .3s ease;
 }
+
 .services-box:hover a i {
     margin-left: 1rem;
 }
-.services-box:hover{
-    box-shadow: 0 20px 30px rgba(35,47,85,0.1);
+
+.services-box:hover {
+    box-shadow: 0 20px 30px rgba(35, 47, 85, 0.1);
 }
+
 /* Plan */
-#plan{
+#plan {
     display: flex;
     background-image: url(https://preview.colorlib.com/theme/lendo/assets/img/gallery/section-bg1.jpg.webp);
     align-items: center;
     justify-content: right;
     background-position: left center;
     background-size: cover;
-    padding: 10rem 0 ;
+    padding: 10rem 0;
 }
-.plan{
+
+.plan {
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -360,17 +373,20 @@ nav {
     padding: 8rem 6rem;
 }
 
-.plan-main{
+.plan-main {
     width: 900px;
     margin-left: 50px;
 }
-.plan h1{
+
+.plan h1 {
     position: relative;
 }
-.plan h1 a:hover{
+
+.plan h1 a:hover {
     color: var(--red);
 }
-.plan h1::before{
+
+.plan h1::before {
     content: '';
     position: absolute;
     top: 25px;
@@ -379,29 +395,34 @@ nav {
     height: 3px;
     background-color: var(--red);
 }
-.plan h1 a{
+
+.plan h1 a {
     color: #171717;
     font-weight: 400;
     font-size: 3.5rem;
     transition: all .3s ease;
 }
-.plan-main p{
+
+.plan-main p {
     margin: 3rem 0;
     margin-bottom: 6rem;
 }
+
 /* Choose */
-#choose{
+#choose {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.choose{
+
+.choose {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     padding: 3rem 0;
 }
-.choose-main{
+
+.choose-main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -410,11 +431,13 @@ nav {
     position: relative;
     margin-left: 8rem;
 }
-.choose-main h1{
+
+.choose-main h1 {
     font-size: 3.4rem;
     font-weight: 400;
 }
-.choose-main::after{
+
+.choose-main::after {
     position: absolute;
     content: 'WHY CHOOSE US';
     color: var(--red);
@@ -425,22 +448,26 @@ nav {
     left: -150px;
     transform: rotate(-90deg);
 }
-.choose-main p{
+
+.choose-main p {
     margin: 3rem 0;
     color: var(--grey);
     font-weight: 500;
 }
-.choose-video{
+
+.choose-video {
     height: 700px;
     position: relative;
     margin-left: 4rem;
 }
-.choose-video img{
+
+.choose-video img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.choose-video i{
+
+.choose-video i {
     font-size: 3rem;
     color: var(--red);
     display: flex;
@@ -452,7 +479,8 @@ nav {
     border-radius: 50%;
     transition: all .3s ease;
 }
-.choose-v-i{
+
+.choose-v-i {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -462,11 +490,12 @@ nav {
     top: 50%;
     left: 50%;
     border-radius: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
     padding: .4rem;
     border: 2px solid #ffffff;
 }
-.choose-v-i::after{
+
+.choose-v-i::after {
     content: '';
     position: absolute;
     width: 100px;
@@ -479,21 +508,24 @@ nav {
     transform: scale(1.4);
     transition: all .3s ease;
 }
-.choose-v-i:hover i{
+
+.choose-v-i:hover i {
     background-color: var(--red);
     color: #fff;
 }
-.choose-v-i:hover::after{
+
+.choose-v-i:hover::after {
     transform: scale(1.6);
 }
 
-.choose-main-flex{
+.choose-main-flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 4rem;
 }
-.choose-box{
+
+.choose-box {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -501,21 +533,91 @@ nav {
     width: 45%;
     height: 150px;
 }
-.choose-box h1{
+
+.choose-box h1 {
     font-size: 5rem;
     font-weight: 700;
     color: var(--red);
     padding: 1rem 2rem;
 }
-.choose-box h4{
+
+.choose-box h4 {
     font-size: 2.2rem;
     font-weight: 400;
     color: #132E43;
     line-height: 3rem;
 }
+
+/* Carousal */
+#carousal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+    background-color: #F2F4F8;
+}
+
+.carousal {
+    white-space: nowrap;
+    width: 1200px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.carousal::after {
+    height: 100%;
+    width: 100px;
+    left: 0;
+    top: 0;
+    content: '';
+    background-color: #E61818;
+    position: absolute;
+    background: rgb(241, 245, 255);
+    background: linear-gradient(90deg, rgba(241, 245, 255, 1) 36%, rgba(242, 244, 248, 0) 100%);
+}
+.carousal::before {
+    height: 100%;
+    width: 100px;
+    right: 0;
+    top: 0;
+    content: '';
+    background-color: #E61818;
+    position: absolute;
+    z-index: 2;
+    background: rgb(241, 245, 255);
+    background: linear-gradient(90deg, rgba(242,244,248,0) 0%, rgba(241,245,255,1) 50%);
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+
+    }
+}
+
+.carousal-flex {
+    display: inline-block;
+    animation: 15s slide infinite linear;
+    /* transform: translateX(-80%); */
+
+}
+
+.carousal-flex img {
+    width: 120px;
+    margin: 0 2.5rem;
+}
+
 @media screen and (max-width:1300px) {
     .choose-main {
         width: 400px;
+    }
+
+    .carousal {
+        width: 90%;
     }
 }
 
@@ -574,25 +676,32 @@ nav {
         margin-top: 2rem;
         display: none;
     }
+
     .services-head {
         width: 900px;
     }
+
     .services-header {
         width: 90%;
     }
+
     .services-flex {
         width: 900px;
     }
+
     .services-box {
         width: calc(25% - 2rem);
     }
-    .plan-main{
+
+    .plan-main {
         width: 600px;
     }
+
     .choose-video {
         height: 650px;
         width: 400px;
     }
+
     .choose-main {
         width: 370px;
     }
@@ -602,21 +711,26 @@ nav {
     .services-head {
         width: 700px;
     }
+
     .services-flex {
         width: 700px;
         flex-wrap: wrap;
     }
-    .services-box{
+
+    .services-box {
         width: calc(50% - 3rem);
         margin-top: 3rem;
     }
+
     #choose {
         flex-direction: column;
     }
-    .choose-main{
+
+    .choose-main {
         padding: 4rem 0;
         width: 500px;
     }
+
     .choose-video {
         height: 480px;
         width: 400px;
@@ -629,21 +743,26 @@ nav {
     h1 {
         font-size: 4rem;
     }
-    .plan-main{
+
+    .plan-main {
         width: 100%;
         margin-left: 0;
     }
-    .plan{
+
+    .plan {
         width: 90%;
         align-items: center;
         justify-content: center;
     }
-    .plan h1::before{
+
+    .plan h1::before {
         display: none;
     }
-    .choose-main{
+
+    .choose-main {
         width: 420px;
     }
+
     .choose-main::after {
         left: -120px;
     }
@@ -653,49 +772,60 @@ nav {
     h1 {
         font-size: 3.5rem;
     }
+
     .services-head {
         width: auto;
         margin: 0 3rem;
     }
+
     .services-flex {
         width: auto;
         margin: 0 3rem;
     }
+
     .services-header h1 {
         font-size: 2.5rem;
         line-height: 3rem;
     }
-    .services-header span{
+
+    .services-header span {
         top: 2rem;
         letter-spacing: 4px;
     }
-    .services-flex{
+
+    .services-flex {
         justify-content: space-between;
     }
-    .services-box{
+
+    .services-box {
         width: calc(50% - 2rem);
-    }   
+    }
+
     .plan {
         padding: 8rem 4rem;
     }
-    .choose-main{
+
+    .choose-main {
         width: 90%;
         margin-left: 7rem;
         margin-right: 3rem;
     }
+
     .choose-video {
         height: 350px;
         width: 90%;
     }
-    .choose-box{
+
+    .choose-box {
         align-items: center;
         justify-content: center;
         text-align: center;
     }
+
     .choose-main::after {
         font-size: 1.4rem;
     }
-    
+
 }
 
 @media screen and (max-width:500px) {
@@ -706,36 +836,46 @@ nav {
     .hero {
         gap: 4rem 0;
     }
-    .services-box{
+
+    .services-box {
         width: 90%;
     }
+
     .services-header span {
         top: 5rem;
     }
+
     .services-header {
         width: 100%;
     }
+
     .services-flex {
         width: auto;
         margin: 0 1.5rem;
     }
-    .services-flex{
+
+    .services-flex {
         justify-content: center;
     }
+
     .plan h1 a {
         font-size: 3rem;
     }
-    .choose-main h1{
+
+    .choose-main h1 {
         font-size: 3rem;
     }
-    .choose-main{
+
+    .choose-main {
         padding: 4rem 2.5rem;
         margin-left: 4rem;
         margin-right: 3rem;
     }
+
     .choose-main::after {
         left: -83px;
     }
+
 }
 
 @media screen and (max-width:300px) {}
