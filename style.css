@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: "Jost", sans-serif;
+    font-family: 'Jost', sans-serif;
 }
 
 h1 {
@@ -575,6 +577,7 @@ nav {
     background: rgb(241, 245, 255);
     background: linear-gradient(90deg, rgba(241, 245, 255, 1) 36%, rgba(242, 244, 248, 0) 100%);
 }
+
 .carousal::before {
     height: 100%;
     width: 100px;
@@ -585,7 +588,7 @@ nav {
     position: absolute;
     z-index: 2;
     background: rgb(241, 245, 255);
-    background: linear-gradient(90deg, rgba(242,244,248,0) 0%, rgba(241,245,255,1) 50%);
+    background: linear-gradient(90deg, rgba(242, 244, 248, 0) 0%, rgba(241, 245, 255, 1) 50%);
 }
 
 @keyframes slide {
@@ -611,6 +614,153 @@ nav {
     margin: 0 2.5rem;
 }
 
+/* Grid  */
+#grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.grid-main {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "pic1 pic1 pic2 pic2"
+        "pic3 pic4 pic4 pic5";
+    width: 100%;
+}
+
+.pic1 {
+    grid-area: pic1;
+}
+
+.pic2 {
+    grid-area: pic2;
+}
+
+.pic3 {
+    grid-area: pic3;
+}
+
+.pic4 {
+    grid-area: pic4;
+}
+
+.pic5 {
+    grid-area: pic5;
+}
+
+.g-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.g-pic {
+    position: relative;
+}
+
+.g-a {
+    background-color: var(--red);
+    z-index: 10;
+    position: absolute;
+    bottom: 20px;
+    color: #fff;
+    padding: 2rem 2.5rem;
+    left: 5%;
+    transition: all .7s ease;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.g-pic::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all .6s ease;
+    background-color: transparent;
+}
+
+.g-pic:hover::before {
+    background-color: #1717175b;
+}
+
+.g-pic:hover .g-a {
+    left: calc(10%);
+    opacity: 1;
+}
+
+.g-a p {
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.g-a h2 {
+    transform: translateX(100px);
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.g-pic:hover .g-a p {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.g-pic:hover .g-a h2 {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.g-a p {
+    font-size: 1.9rem;
+    font-family: "Jost", sans-serif;
+    font-weight: 300;
+}
+
+.g-a h2 {
+    font-size: 3rem;
+}
+
+.more-project{
+    background-color: var(--red);
+    width: 100%;
+    padding: 2rem 4rem;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.more-project::after{
+    content: '';
+    width: 0%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    position: absolute;
+    background-color: #b61313;
+    transition: all .4s ease;
+}
+.more-project:hover::after{
+    width: 100%;
+}
+.more-project i{
+    margin-left: 2rem;
+}
+.m-p-a{
+    z-index: 4;
+    position: relative;
+}
+
 @media screen and (max-width:1300px) {
     .choose-main {
         width: 400px;
@@ -618,6 +768,10 @@ nav {
 
     .carousal {
         width: 90%;
+    }
+
+    .g-a h2 {
+        font-size: 2.5rem;
     }
 }
 
@@ -705,6 +859,18 @@ nav {
     .choose-main {
         width: 370px;
     }
+
+    .grid-main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 300px 300px 300px;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "pic1 pic2"
+            "pic3 pic4"
+            "pic5 pic5";
+    }
 }
 
 @media screen and (max-width:1000px) {
@@ -765,6 +931,10 @@ nav {
 
     .choose-main::after {
         left: -120px;
+    }
+
+    .g-a h2 {
+        font-size: 1.8rem;
     }
 }
 
@@ -828,6 +998,22 @@ nav {
 
 }
 
+@media screen and (max-width:600px) {
+    .grid-main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5,300px);
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "pic1"
+            "pic2"
+            "pic3"
+            "pic4"
+            "pic5";
+    }
+}
+
 @media screen and (max-width:500px) {
     h1 {
         font-size: 3rem;
@@ -875,6 +1061,7 @@ nav {
     .choose-main::after {
         left: -83px;
     }
+
 
 }
 
